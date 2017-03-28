@@ -15,8 +15,6 @@ router.post('/todos', function (request, response) {
   const { userpost } = request.cookies;
   const { userposts = [] } = request.cookies;
 
-
-
   // response.cookie('todos', [todo, ...todos])
   // response.cookie('usernames', [username, ...usernames])
   userposts.push({username: username, todo: todo});
