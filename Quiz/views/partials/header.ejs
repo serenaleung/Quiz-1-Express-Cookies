@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Tweets</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+      .jumbotron {
+        padding: 1em !important;
+        border-radius: 1px !important;
+      }
+      .tweetBar{
+        border-right: thin solid gray;
+        height: 4.7em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        margin: 0em 0em 0em 0em;
+      }
+      .info{
+        margin-left: -6em;
+      }
+      .btn-info {
+        margin-top: 1em;
+        /*float: right;*/
+      }
+      .tweet {
+        margin-top: 0.3em;
+        padding-left: 3em !important;
+        margin-left: 0.6em;
+        z-index: 2;
+        position: relative;
+        left: 0.5;
+      }
+      .tweet2 {
+        margin-top: 0.3em;
+        padding-left: 3em !important;
+        margin-left: 0.6em;
+        z-index: 2;
+        position: relative;
+        left: 0.9em;
+      }
+      .cardInfo {
+        margin-top: 0.3em;
+      }
+
+
+      #bg {
+        /*max-width: 100vw;*/
+        margin-top: -2em;
+        height: 1280px;
+        background-image: url("http://studiosantos.com.br/wp-content/uploads/2015/03/fundo.jpg");
+      }
+
+      /*#icon {
+       width: 50px;
+       height: 50px;
+       float: left;
+     }*/
+
+      @media (max-width: 1097px) {
+        .info{
+          z-index: 1;
+          position: relative;
+          left: 3em;
+          padding-left: 0.5em;
+        }
+
+      }
+
+      @media (max-width: 991px) {
+        .info{
+          z-index: 1;
+          position: relative;
+          left: 1em;
+          padding-left: 0.5em;
+        }
+      }
+
+      @media (max-width: 874px) {
+      .cardInfo {
+        padding-right:1em;
+        margin-top:-0.2em;
+      }
+
+    }
+
+      @media (min-width: 768px) {
+      .info{
+        z-index: 1;
+        position: relative;
+        left: 1em;
+        padding-left: 2em;
+      }
+
+    }
+
+      @media (max-width: 767px) {
+      .card, .hash, .tweetBar {
+        display: none;
+      }
+      .tweet {
+        /*float:left;*/
+        z-index: 2;
+        position: relative;
+        left: -3em;
+      }
+      .tweet2 {
+        /*float: left;*/
+        z-index: 2;
+        position: relative;
+        left: -2.7em;
+      }
+    }
+
+
+
+    </style>
+  </head>
+  <body>

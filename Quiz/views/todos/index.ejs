@@ -1,0 +1,73 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+      <div class="jumbotron card" style="padding:1em;">
+        <div class="row">
+
+            <img src="/images/cat.png" alt="" style="padding-left: 1em;width: 90px; float:left;">
+
+              <h2 class="cardInfo" style="padding-left: 3.5em;">Full Name</h2>
+              <h6 class="cardInfo" style="padding-left: 8.7em;;">@username</h6>
+
+
+          <!-- Add the extra clearfix for only the required viewport -->
+
+        </div>
+          <br>
+          <h6>Messages</h6>
+          <h3>12</h3>
+      </div>
+      <h2 class="hash">Trending AweTweets</h2>
+      <div class="jumbotron hash" style="padding: 1em;">
+        <h6><a href="#">#Things</a></h6>
+        <h6><a href="#">#Things</a></h6>
+        <h6><a href="#">#Things</a></h6>
+        <h6><a href="#">#Things</a></h6>
+        <h6><a href="#">#Things</a></h6>
+        <h6><a href="#">#Things</a></h6>
+      </div>
+    </div>
+      <div class="col col-sm-8 col-md-8">
+        <div class="jumbotron" style="padding-bottom: 4.5em!important;">
+
+          <form method="post">
+            <div>
+              <input class="form-control" id="username" name="username" placeholder="Username" style="width: 13em; margin-bottom: 1em;"/>
+            </div>
+            <div>
+              <textarea maxlength="255" class="form-control" placeholder="Write message here..." id="todo" name="todo" rows="8" cols="80"></textarea>
+              <input class="btn btn-info pull-right" type="submit" name="submit" value="Submit">
+              <%# <button type="button" name="submit" class="btn btn-info">Submit</button>%>
+            </div>
+          </form>
+
+        </div>
+
+
+        <% if(userposts) { %>
+          <% for (let [key, value] of Object.entries(userposts)) { %>
+
+                    <div class="jumbotron">
+
+                            <div style="float: left; " class="tweetBar"><img src="/images/cat.png" alt="" style="width:60px;"></div>
+                              <h3 class="tweet"><%= `${value.username}` %></h3>
+                              <h5 class="tweet2"><%= `${value.todo}` %></h5>
+                              <%=console.log(`key: ${key}, value.username: ${value.username}, val.todo: ${value.todo},`)%>
+
+                    </div>
+
+          <% } %>
+        <% } %>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+<%- include('../partials/footer') %>
